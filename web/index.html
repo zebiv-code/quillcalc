@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuillCalc — heyman.ai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/controls.css">
+  <link rel="stylesheet" href="css/grid.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div id="app">
+    <div id="header" class="status-line">QuillCalc</div>
+    <div id="control-panel">
+      <div id="entry-line"></div>
+      <div id="prompt-line"></div>
+      <div id="edit-line"></div>
+    </div>
+    <div id="grid"></div>
+    <div id="footer">
+      <span>Copyright &copy; 2025 Quill &amp; Qubit</span>
+      <span>v1.0.0</span>
+    </div>
+  </div>
+  <!-- QuillCalc JS — loaded in dependency order -->
+  <script src="js/constants.js"></script>
+  <script src="js/coordinates.js"></script>
+  <script src="js/cell.js"></script>
+  <script src="js/formula/lexer.js"></script>
+  <script src="js/formula/parser.js"></script>
+  <script src="js/formula/evaluator.js"></script>
+  <script src="js/engine/dependency-graph.js"></script>
+  <script src="js/engine/calculation.js"></script>
+  <script src="js/sheet/event-emitter.js"></script>
+  <script src="js/sheet/undo-manager.js"></script>
+  <script src="js/sheet/file-manager.js"></script>
+  <script src="js/sheet/sheet.js"></script>
+  <script src="js/commands.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

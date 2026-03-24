@@ -1,0 +1,63 @@
+/* ============================================================
+   QuillCalc — Terminal-style VisiCalc clone
+   ============================================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #00ff00;
+  --green-dim: #00aa00;
+  --green-dark: #005500;
+  --bg: #000000;
+  --bg-header: #333333;
+  --highlight-bg: #00cc00;
+  --highlight-text: #000000;
+  --font: 'IBM Plex Mono', monospace;
+  --char-width: 1ch;
+  --line-height: 1.2;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--green);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: var(--line-height);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* --- Blinking cursor --- */
+@keyframes blink {
+  0%, 49.9% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* --- Footer --- */
+#footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5ch;
+  font-size: 0.75em;
+  color: #555;
+  background: var(--bg);
+  height: calc(var(--line-height) * 1em);
+  align-items: center;
+}

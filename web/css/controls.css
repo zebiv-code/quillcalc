@@ -1,0 +1,50 @@
+/* --- Header / Status Line --- */
+.status-line {
+  flex-shrink: 0;
+  padding: 0 0.5ch;
+  background: var(--bg);
+  color: var(--green);
+  border-bottom: 1px solid var(--green-dark);
+  font-weight: 700;
+  height: calc(var(--line-height) * 1em);
+  display: flex;
+  align-items: center;
+}
+
+/* --- Control Panel (3 lines) --- */
+#control-panel {
+  flex-shrink: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--green);
+  padding: 0 0.5ch;
+}
+
+#entry-line,
+#prompt-line,
+#edit-line {
+  height: calc(var(--line-height) * 1em);
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+#entry-line .coord {
+  display: inline-block;
+  width: 8ch;
+}
+
+#entry-line .type-ind {
+  display: inline-block;
+  width: 3ch;
+}
+
+#entry-line .cell-contents {
+  flex: 1;
+  overflow: hidden;
+}
+
+#entry-line .mode-ind {
+  width: 6ch;
+  text-align: right;
+}

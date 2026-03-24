@@ -1,0 +1,63 @@
+/* --- Grid --- */
+#grid {
+  flex: 1;
+  overflow: hidden;
+  background: var(--bg);
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: none;
+}
+
+#grid .row {
+  display: flex;
+  height: calc(var(--line-height) * 1em);
+  white-space: nowrap;
+}
+
+#grid .cell,
+#grid .row-num,
+#grid .col-header,
+#grid .corner {
+  display: inline-block;
+  overflow: hidden;
+  height: calc(var(--line-height) * 1em);
+  line-height: calc(var(--line-height) * 1em);
+}
+
+#grid .corner {
+  width: 5ch;
+  background: var(--bg-header);
+  color: #999;
+}
+
+#grid .col-header {
+  text-align: center;
+  background: var(--bg-header);
+  color: #ccc;
+}
+
+#grid .col-header.active {
+  background: var(--highlight-bg);
+  color: var(--highlight-text);
+}
+
+#grid .row-num {
+  width: 5ch;
+  text-align: right;
+  background: var(--bg-header);
+  color: #ccc;
+  padding-right: 1ch;
+}
+
+#grid .row-num.active {
+  background: var(--highlight-bg);
+  color: var(--highlight-text);
+}
+
+#grid .cell {
+  color: var(--green);
+}
+
+#grid .cell.cursor {
+  background: var(--highlight-bg);
+  color: var(--highlight-text);
+}
